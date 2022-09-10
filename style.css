@@ -1,0 +1,59 @@
+body {
+    background-color: #32B89B;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    width: 20rem;
+}
+  
+.copp {
+    background-color: #C47F2B;
+}
+  
+.silv {
+    background-color: #C0C0C0;
+}
+  
+.elec {
+    background-color: #F2E279;
+}
+  
+.golden {
+    background-color: #FFD700;
+}
+  
+.plat {
+    background-color: #e5e4e2;
+}
+
+.result {
+    text-align: center;
+}
+
+table, tr, th, td {
+    position: center;
+  }
+  
+  table {
+    border: 2px solid forestgreen;
+    width: 800px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+  }
+    
+  td {
+    text-align: center;
+  }
