@@ -38,6 +38,10 @@ body {
     text-align: center;
 }
 
+.resultBox  {
+    align-items: center;
+}
+
 table, tr, th, td {
     position: center;
   }
