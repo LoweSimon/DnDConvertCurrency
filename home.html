@@ -66,18 +66,31 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-primary w-25">
+        <button type="button" class="btn btn-primary w-25" onclick="convert()">
             Submit
         </button>
 
-        <button type="button" class="btn btn-danger w-25">
+        <button type="button" class="btn btn-danger w-25" onclick="clearAll()">
             Reset
         </button>
 
         <div class="card resultBox" id="results">
             <div class="card-body result">
                 <h5 class="card-title">Results</h5>
-                <p class="card-text resultBody" id="resultBody"></p>
+                <p class="card-text resultBody" id="resultBody">
+                    GP: <span id="goldNumber"></span>, 
+                    SP: <span id="silverNumber"></span>, 
+                    CP: <span id="copperNumber"></span>
+                </p>
+                <p class="card-text">
+                    Per party member:
+                    <br>
+                    <span id="partyMembers">
+                        GP: <span id="partyGoldNumber"></span>, 
+                        SP: <span id="partySilverNumber"></span>, 
+                        CP: <span id="partyCopperNumber"></span>
+                    </span>
+                </p>
             </div>
         </div>
     </div>
