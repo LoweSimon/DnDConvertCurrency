@@ -66,15 +66,17 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-primary w-25" onclick="convert()">
-            Submit
-        </button>
+        <div id="button__container">
+            <button type="button" class="btn btn-primary w-25" id="submit" onclick="convert()">
+                Submit
+            </button>
 
-        <button type="button" class="btn btn-danger w-25" onclick="clearAll()">
-            Reset
-        </button>
+            <button type="button" class="btn btn-danger w-25" id="reset" onclick="clearAll()">
+                Reset
+            </button>
+        </div>
 
-        <div class="card resultBox" id="results">
+        <div class="card mx-auto resultBox" id="results">
             <div class="card-body result">
                 <h5 class="card-title">Results</h5>
                 <p class="card-text resultBody" id="resultBody">
