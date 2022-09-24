@@ -1,21 +1,30 @@
-let c = document.getElementById("copper").value;
-let s = document.getElementById("silver").value;
-let e = document.getElementById("electrum").value;
-let g = document.getElementById("gold").value;
-let p = document.getElementById("platinum").value;
-
-console.log(c);
+// Function which obtains each value from the cards and works out how much
+// of each currency is left.
 
 function convert()  {
+    
+    let c = document.getElementById("copper").value;
+    let s = document.getElementById("silver").value;
+    let e = document.getElementById("electrum").value;
+    let g = document.getElementById("gold").value;
+    let p = document.getElementById("platinum").value;
 
     let cpnumber = Math.floor(c / 100);
     let spnumber = Math.floor(s / 10);
     let epnumber = Math.floor(e / 2);
+    let gpnumber = Math.floor(g / 1);
 
-    const outcome = cpnumber + spnumber + epnumber;
+    let cpsilver = Math.floor(c % 10);
 
-    document.getElementById("goldNumber").value = outcome;
-    console.log(cpnumber);
+    let cpremainder = Math.floor(c % 100);
+    let spremainder = Math.floor(s % 10);
+    let epremainder = Math.floor(e % 2);
+
+    const goldOutcome = cpnumber + spnumber + epnumber + gpnumber;
+
+    document.getElementById("goldNumber").innerHTML = goldOutcome;
+    document.getElementById("silverNumber").innerHTML = spremainder + cpsilver;
+    document.getElementById("copperNumber").innerHTML = cpremainder;
 }
 
 
