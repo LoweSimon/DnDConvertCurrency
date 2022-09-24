@@ -8,13 +8,12 @@ function convert()  {
     let e = document.getElementById("electrum").value;
     let g = document.getElementById("gold").value;
     let p = document.getElementById("platinum").value;
+    let party = document.getElementById("partyNum").value;
 
     let cpnumber = Math.floor(c / 100);
     let spnumber = Math.floor(s / 10);
     let epnumber = Math.floor(e / 2);
     let gpnumber = Math.floor(g / 1);
-
-    let cpsilver = Math.floor(c % 10);
 
     let cpremainder = Math.floor(c % 100);
     let spremainder = Math.floor(s % 10);
@@ -23,8 +22,18 @@ function convert()  {
     const goldOutcome = cpnumber + spnumber + epnumber + gpnumber;
 
     document.getElementById("goldNumber").innerHTML = goldOutcome;
-    document.getElementById("silverNumber").innerHTML = spremainder + cpsilver;
+    document.getElementById("silverNumber").innerHTML = spremainder;
     document.getElementById("copperNumber").innerHTML = cpremainder;
+
+    let partydivide = goldOutcome / document.getElementById("partyNum").value;
+
+    if (party == "")    {
+        document.getElementById("partyGoldNumber").innerHTML = "";
+    } else  {
+        document.getElementById("partyGoldNumber").innerHTML = partydivide;
+    }
+
+    
 }
 
 
@@ -37,6 +46,7 @@ function clearAll() {
     document.getElementById("electrum").value = "";
     document.getElementById("gold").value = "";
     document.getElementById("platinum").value = "";
+    document.getElementById("partyNum").value = "";
 
     // Resetting results back to zero
     document.getElementById("goldNumber").innerHTML = "";
